@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <meta charset="utf-8">
+         <link href="/styles/styleSheet.css" rel="stylesheet" type="text/css">
+         <link href="/styles/styleSheet2.min.css" rel="stylesheet" type="text/css">
+    </head>
+    <body onload="populateDropDown()">
+        <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="coordinatorIndex.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">Digital DVR </div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="coordinatorIndex.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
+
+        
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Recordings
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link" href="odometerreading.html">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Odometer Reading</span></a>
+            </li>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link" href="driverGasReciepts.html">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Gas Reciepts</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="driverMonthlyDVR.html">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Monthly DVR Report</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Requests
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link" href="driverMaintanceReq.html">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Maintainence Requests</span></a>
+            </li>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link" href="driveMilesReq.html">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Addtional Miles Requests</span></a>
+            </li>
+
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Coordinator Tools
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link" href="addDriverForm.html">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Add/Edit drivers</span></a>
+            </li>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link" href="addVehicle.html">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Add/Edit Vehicles</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="driverMonthlyDVR.html">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Monthly DVR Report</span></a>
+            </li>
+
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link" href="driverMaintanceReq.html">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Manage Requests</span></a>
+            </li>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link" href="driveMilesReq.html">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Send reminder emails</span></a>
+            </li>
+
+            
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            
+
+            <!-- Sidebar Message -->
+            <div class="sidebar-card d-none d-lg-flex">
+                
+                <p class="text-center mb-2"><strong>Digital DVR</strong> is packed with features to help with all your vehicle needs. Click below to find out what all you can do!</p>
+                <a class="btn btn-success btn-sm" href="driverAboutDVR.html">About Digial DVR</a>
+            </div>
+
+        </ul>
+            
+        <!-- End of Sidebar -->
+
+        
+
+
+         <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+    
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <!--Profile link place holder-->
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Name Space</span>
+                                <!--Profile Image holder -->
+                                <img class="img-profile rounded-circle"
+                                    src="abstract-user-flat-4.svg">
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Add or edit a Vehicle to the database</h1>
+                    </div>
+                      <!-- Content Row -->
+                    <div link rel="stylesheet" href="dataformSheet.css">
+                        <form>
+                            <div class="formcontainer">
+                              <hr />
+                                <div class="container">
+                                <label for="vin"><strong>Vehicle Vin</strong></label>
+                                <input
+                                  id = "txtmake"
+                                  type="vin"
+                                  placeholder="Enter Vin No."
+                                  name="vin"
+                                  required
+                                />
+                                </div>
+                              <div class="container">
+                                <label for="make"><strong>Make</strong></label>
+                                <input
+                                  id = "txtmake"
+                                  type="make"
+                                  placeholder="Enter make"
+                                  name="make"
+                                  required
+                                />
+                                <div class="model">
+                                <label for="model"><strong>Model</strong></label>
+                                <input
+                                    id = "txtmodel"
+                                    type="model"
+                                    placeholder="Enter model"
+                                    name="model"
+                                    required
+                                />
+                                <div class="container"></div>
+                                <label for="licenseplate"><strong>License Plate</strong></label>
+                                <input
+                                    id = txtlicenseplate
+                                  type="licenseplate"
+                                  placeholder="Enter License Plate"
+                                  name="licenseplate"
+                                  required
+                                />
+                                <div class="container"></div>
+                                <label for="allotment"><strong>Mile Allotment</strong></label>
+                                <input
+                                  id = "txtallotment"
+                                  type="text"
+                                  placeholder="Enter Mile Allotment"
+                                  name="allotment"
+                                  required
+                                />
+                                <div class="container"></div>
+                                <label for="missionid"><strong>Mission ID</strong></label>
+                                <input
+                                  id = "txtmissionid"
+                                  type="text"
+                                  placeholder="Enter Mile Allotment"
+                                  name="allotment"
+                                  required
+                                />
+                                <div class="container"></div>
+                                <label for="drivers"><strong>Drivers</strong></label>
+                                <input
+                                  id = "txtdriver"
+                                  type="text"
+                                  placeholder="Primary Driver"
+                                  name="driver"
+                                  required
+                                  />
+                                <input
+                                  id = "txtcodriver"
+                                  type="text"
+                                  placeholder="Co Driver (Optional)"
+                                  name="driver"
+                                  />
+                                  
+                                  <input
+                                  id = "txtcodriver"
+                                  type="text"
+                                  placeholder="Co Driver (Optional)"
+                                  name="driver"
+                                />
+
+                              </div>
+                              <input type = "reset">
+                              <button id="btnodosubmit" type="button">Submit</button>
+                              <div class="container" style="background-color: white">
+                              <label style="padding-left: 15px"></label>
+                              </div>
+                            </div>
+                          </form>
+                          <div id="odooutput"></div>
+                    </div>
+
+<!-- FOR DROP DOWN VIEW -->
+
+<style>
+    /* Dropdown Button */
+    .dropbtn {
+      background-color: #042baa;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Dropdown button on hover & focus */
+    .dropbtn:hover,
+    .dropbtn:focus {
+      background-color: #3e638e;
+    }
+
+    /* The search field */
+    #myInput {
+      box-sizing: border-box;
+      background-image: url("searchicon.png");
+      background-position: 14px 12px;
+      background-repeat: no-repeat;
+      font-size: 16px;
+      padding: 14px 20px 12px 45px;
+      border: none;
+      border-bottom: 1px solid #ddd;
+    }
+
+    /* The search field when it gets focus/clicked on */
+    #myInput:focus {
+      outline: 3px solid #ddd;
+    }
+
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f6f6f6;
+      min-width: 230px;
+      border: 1px solid #ddd;
+      z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+    .show {
+      display: block;
+    }
+  </style>
+  <!--
+  for search bar 
+  <input
+    type="text"
+    id="myInput"
+    onkeyup="myFunction()"
+    placeholder="Search for vehicles"
+  />
+-->
+  <div>
+    <hr />
+    <b> Select a Vehicle to view info</b>
+    <br />
+    <b> Mission Id: Year: Make: Model:</b>
+
+    <ul name="vehcile" id="selectVehicle"></ul>
+    <br /><br />
+
+    <p id="vehicleInfo"></p>
+  </div>
+
+  <!-- FOR DROP DOWN-->
+  
+  <div class="dropdown" onload="populateDropDown()">
+    <button onclick="myDropdown()" class="dropbtn">Dropdown</button>
+    <div id="myDropdown" class="dropdown-content" >
+      <input
+        type="text"
+        placeholder="Search.."
+        id="myInput"
+        onkeyup="filterFunction()"
+      />
+    </div>
+  </div>
+  <script src="src/app.js"></script>
+    </body>
+</html>
