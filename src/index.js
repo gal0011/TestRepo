@@ -1,8 +1,8 @@
 // Import the functions you need from the SDKs you need
 import {txtDate, txtOdometer, btnOdoSubmit} from "./ui";
 import { initializeApp } from "firebase/app";
-import { getFirestore, doc, setDoc, getDoc,arrayUnion, arrayRemove, updateDoc } from "firebase/firestore";
-import { collection, query, where, getDocs } from "firebase/firestore";
+import { getFirestore, doc, setDoc, getDoc,arrayUnion, arrayRemove, updateDoc, collection, query, where, getDocs } from "firebase/firestore";
+//import { collection, query, where, getDocs } from "firebase/firestore";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
